@@ -1,0 +1,14 @@
+# Runtime tools
+node>=20.0.0
+npm>=10.0.0
+
+# Environment secrets (set via .env)
+telegram_token
+gemini_API
+GEMINI_API_KEY
+APP_URL
+
+# Optional native deps for Puppeteer
+chromium
+libatk-bridge2.0-0
+libx11-xcb1

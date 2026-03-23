@@ -1,0 +1,236 @@
+:root {
+    --border-color: #000;
+    --text-color: #000;
+    --bg-color: #fff;
+    --table-header-bg: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: transparent;
+    line-height: 1.5;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* A4 Container Setup */
+.invoice-container {
+    width: 210mm;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 20mm;
+    background-color: var(--bg-color);
+    box-shadow: none;
+}
+
+/* Header */
+.invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.logo-container {
+    text-align: right;
+}
+
+.invoice-logo {
+    max-width: 220px;
+    height: auto;
+}
+
+.seller-info h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.seller-info p {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.seller-info a {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+/* Info Section (Date & Buyer) */
+.info-section {
+    display: flex;
+    border: 1px solid var(--border-color);
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+}
+
+.date-block {
+    flex: 1;
+    padding: 15px 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.buyer-block {
+    flex: 1;
+    padding: 15px 20px;
+}
+
+.buyer-label {
+    margin-bottom: 15px;
+}
+
+.buyer-name {
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.buyer-address {
+    margin-bottom: 15px;
+    white-space: pre-line;
+}
+
+.buyer-gst {
+    margin-bottom: 15px;
+}
+
+.buyer-state {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* Table Section */
+.table-section {
+    margin-bottom: 30px;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-color);
+    page-break-inside: auto;
+}
+
+.invoice-table tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+}
+
+.invoice-table th,
+.invoice-table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+}
+
+.invoice-table th {
+    background-color: var(--table-header-bg);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.invoice-table td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: top;
+}
+
+/* Column Widths */
+.col-product {
+    width: 40%;
+}
+
+.col-fee {
+    width: 15%;
+}
+
+.col-gst {
+    width: 15%;
+}
+
+.col-duration {
+    width: 15%;
+}
+
+.col-price {
+    width: 15%;
+}
+
+/* Alignments */
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Total Section */
+.total-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    page-break-inside: avoid;
+}
+
+.total-table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid var(--border-color);
+}
+
+.total-table td {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+}
+
+.total-label {
+    text-align: left;
+}
+
+.total-amount {
+    text-align: right;
+    width: 130px;
+}
+
+/* Bank Details */
+.bank-details {
+    margin-top: 50px;
+    page-break-inside: avoid;
+    font-size: 13px;
+}
+
+.bank-details p {
+    margin-bottom: 4px;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    .invoice-container {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        border: none;
+    }
+
+    .invoice-table th {
+        background-color: var(--table-header-bg) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
