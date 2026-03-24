@@ -116,3 +116,12 @@ const gst_rate = 18;
 - _“Failed to generate PDF”_ – Confirm the React app is reachable at `http://localhost:3000` (or update `targetUrl` in `server.js`).
 - _Empty Telegram replies_ – Verify `telegram_token` is correct and the bot is not already running elsewhere.
 
+## Telegram Text Format 
+Client:
+Address:
+State:
+Place of Supply:
+Service:
+Duration:
+Fee:
+
