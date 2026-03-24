@@ -117,11 +117,11 @@ const gst_rate = 18;
 - _Empty Telegram replies_ – Verify `telegram_token` is correct and the bot is not already running elsewhere.
 
 ## Telegram Text Format 
-Client:
-Address:
-State:
-Place of Supply:
-Service:
-Duration:
-Fee:
+- Client:
+- Address:
+- State:
+- Place of Supply:
+- Service:
+- Duration:
+- Fee:
 
